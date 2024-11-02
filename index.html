@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function calculateOvertimePay(hoursWorked) {
+    const overtimeRate = 12.00; 
+    const regularHours = 12;     
+
+    if (hoursWorked > regularHours) {
+        const overtimeHours = hoursWorked - regularHours;
+        const overtimePay = overtimeHours * overtimeRate;
+        return overtimePay;
+    } else {
+        return 0.00; 
+    }
+}
+
+// Example usage
+const hoursWorked = parseInt(prompt("Enter the number of hours worked: "), 10);
+const overtimePay = calculateOvertimePay(hoursWorked);
+
+document.write(`Overtime pay: Rs. ${overtimePay.toFixed(2)}`);
+    
+    </script>
+</body>
+</html>
